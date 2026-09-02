@@ -57,7 +57,7 @@ const brandFeatures = [
         </div>
 
         <div class="brand-slogan">
-          <h1>焕然一新的<br />若依后台管理系统</h1>
+          <h1>焕然一新的<br /><span class="slogan-accent">若依后台管理系统</span></h1>
           <p>若依（RuoYi-Vue）后端零改动，前端整体美化至 SoybeanAdmin 模板，功能完整、界面现代。</p>
         </div>
 
@@ -126,7 +126,7 @@ const brandFeatures = [
   overflow: hidden;
   background-color: var(--el-bg-color);
 
-  /* ===== 左侧品牌区 ===== */
+  /* ===== 左侧品牌区（清新浅色） ===== */
   .brand-panel {
     position: relative;
     display: flex;
@@ -134,7 +134,10 @@ const brandFeatures = [
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--el-color-primary) 0%, var(--el-color-primary-dark-2) 100%);
+    background:
+      radial-gradient(circle at 12% 18%, var(--el-color-primary-light-8) 0%, transparent 42%),
+      radial-gradient(circle at 88% 85%, var(--el-color-success-light-8) 0%, transparent 45%),
+      linear-gradient(160deg, var(--el-color-primary-light-9) 0%, var(--el-bg-color) 55%, var(--el-color-primary-light-9) 100%);
 
     /* 小屏隐藏左侧 */
     @media (max-width: 900px) {
@@ -150,29 +153,32 @@ const brandFeatures = [
     .bg-circle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
 
       &.bg-circle-1 {
-        top: -120px;
-        left: -120px;
-        width: 420px;
-        height: 420px;
+        top: -140px;
+        left: -100px;
+        width: 400px;
+        height: 400px;
+        background: var(--el-color-primary-light-7);
+        opacity: 0.35;
       }
 
       &.bg-circle-2 {
-        right: -80px;
-        bottom: -140px;
-        width: 360px;
-        height: 360px;
-        background: rgba(255, 255, 255, 0.06);
+        right: -90px;
+        bottom: -120px;
+        width: 340px;
+        height: 340px;
+        background: var(--el-color-success-light-7);
+        opacity: 0.3;
       }
 
       &.bg-circle-3 {
-        top: 38%;
-        right: 12%;
-        width: 140px;
-        height: 140px;
-        background: rgba(255, 255, 255, 0.1);
+        top: 34%;
+        right: 10%;
+        width: 130px;
+        height: 130px;
+        background: var(--el-color-warning-light-7);
+        opacity: 0.4;
       }
     }
 
@@ -180,9 +186,10 @@ const brandFeatures = [
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(var(--el-color-primary-light-8) 1px, transparent 1px),
+        linear-gradient(90deg, var(--el-color-primary-light-8) 1px, transparent 1px);
       background-size: 48px 48px;
+      opacity: 0.4;
       mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
     }
   }
@@ -191,7 +198,6 @@ const brandFeatures = [
     position: relative;
     z-index: 1;
     width: min(460px, 82%);
-    color: #fff;
 
     .brand-logo {
       display: flex;
@@ -203,6 +209,7 @@ const brandFeatures = [
         font-size: 20px;
         font-weight: 600;
         letter-spacing: 1px;
+        color: var(--el-text-color-primary);
       }
     }
 
@@ -213,6 +220,15 @@ const brandFeatures = [
         font-weight: 700;
         line-height: 1.35;
         letter-spacing: 1px;
+        color: var(--el-text-color-primary);
+
+        /* 关键词点缀主色 */
+        .slogan-accent {
+          background: linear-gradient(120deg, var(--el-color-primary) 30%, var(--el-color-success) 90%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
       }
 
       p {
@@ -220,7 +236,7 @@ const brandFeatures = [
         max-width: 400px;
         font-size: 14px;
         line-height: 1.9;
-        color: rgba(255, 255, 255, 0.78);
+        color: var(--el-text-color-secondary);
       }
     }
 
@@ -241,20 +257,34 @@ const brandFeatures = [
           justify-content: center;
           width: 42px;
           height: 42px;
-          border-radius: 10px;
-          background: rgba(255, 255, 255, 0.14);
-          backdrop-filter: blur(4px);
+          border-radius: 12px;
+          background: var(--el-color-primary-light-9);
+          color: var(--el-color-primary);
+          border: 1px solid var(--el-color-primary-light-7);
+        }
+
+        &:nth-child(2) .feat-icon {
+          background: var(--el-color-success-light-9);
+          color: var(--el-color-success);
+          border-color: var(--el-color-success-light-7);
+        }
+
+        &:nth-child(3) .feat-icon {
+          background: var(--el-color-warning-light-9);
+          color: var(--el-color-warning);
+          border-color: var(--el-color-warning-light-7);
         }
 
         .feat-title {
           font-size: 15px;
           font-weight: 600;
+          color: var(--el-text-color-primary);
         }
 
         .feat-desc {
           margin-top: 2px;
           font-size: 12px;
-          color: rgba(255, 255, 255, 0.66);
+          color: var(--el-text-color-secondary);
         }
       }
     }
@@ -263,7 +293,7 @@ const brandFeatures = [
       margin-top: 48px;
       font-size: 12px;
       letter-spacing: 0.5px;
-      color: rgba(255, 255, 255, 0.55);
+      color: var(--el-text-color-placeholder);
     }
   }
 
