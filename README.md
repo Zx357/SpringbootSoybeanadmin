@@ -30,37 +30,40 @@
 
 ## 演示图
 
-**登录页**
-
-![登录页](imgs/pic-login.png)
-
-**首页（项目欢迎页）**
-
-![首页](imgs/pic-home.png)
-
-**用户管理（部门树 + 左右布局）**
-
-![用户管理](imgs/pic-user.png)
-
-**字典管理**
-
-![字典管理](imgs/pic-dict.png)
-
-**服务监控**
-
-![服务监控](imgs/pic-server.png)
-
-**定时任务**
-
-![定时任务](imgs/pic-job.png)
-
-**表单构建**
-
-![表单构建](imgs/pic-build.png)
-
-**个人中心**
-
-![个人中心](imgs/pic-profile.png)
+<table>
+  <tr>
+    <td width="50%" align="center"><b>登录页</b></td>
+    <td width="50%" align="center"><b>首页（项目欢迎页）</b></td>
+  </tr>
+  <tr>
+    <td><img src="imgs/pic-login.png"></td>
+    <td><img src="imgs/pic-home.png"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><b>用户管理（部门树 + 左右布局）</b></td>
+    <td width="50%" align="center"><b>字典管理</b></td>
+  </tr>
+  <tr>
+    <td><img src="imgs/pic-user.png"></td>
+    <td><img src="imgs/pic-dict.png"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><b>服务监控</b></td>
+    <td width="50%" align="center"><b>定时任务</b></td>
+  </tr>
+  <tr>
+    <td><img src="imgs/pic-server.png"></td>
+    <td><img src="imgs/pic-job.png"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><b>表单构建</b></td>
+    <td width="50%" align="center"><b>个人中心</b></td>
+  </tr>
+  <tr>
+    <td><img src="imgs/pic-build.png"></td>
+    <td><img src="imgs/pic-profile.png"></td>
+  </tr>
+</table>
 
 ## 环境要求
 
