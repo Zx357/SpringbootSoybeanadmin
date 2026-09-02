@@ -103,14 +103,14 @@ onMounted(() => {
 <template>
   <ElForm ref="formRef" :model="model" :rules="rules" size="large" :show-label="false" @keyup.enter="handleSubmit">
     <ElFormItem prop="username">
-      <ElInput v-model="model.username" placeholder="账号">
+      <ElInput v-model="model.username" placeholder="账号" class="h-48px">
         <template #prefix>
           <SvgIcon icon="ph:user" class="text-18px" />
         </template>
       </ElInput>
     </ElFormItem>
     <ElFormItem prop="password">
-      <ElInput v-model="model.password" type="password" show-password-on="click" placeholder="密码">
+      <ElInput v-model="model.password" type="password" show-password-on="click" placeholder="密码" class="h-48px">
         <template #prefix>
           <SvgIcon icon="ph:lock-key" class="text-18px" />
         </template>
@@ -118,39 +118,39 @@ onMounted(() => {
     </ElFormItem>
     <ElFormItem v-if="captchaEnabled" prop="code" :rules="codeRules">
       <div class="w-full flex-y-center gap-12px">
-        <ElInput v-model="model.code" placeholder="验证码" @keyup.enter="handleSubmit">
+        <ElInput v-model="model.code" placeholder="验证码" class="h-48px flex-1" @keyup.enter="handleSubmit">
           <template #prefix>
             <SvgIcon icon="ph:shield-check" class="text-18px" />
           </template>
         </ElInput>
         <img
           :src="codeUrl"
-          class="h-40px w-110px cursor-pointer rounded-4px"
+          class="h-48px w-120px cursor-pointer rounded-6px"
           alt="验证码"
           title="点击刷新验证码"
           @click="getCode"
         />
       </div>
     </ElFormItem>
-    <ElFormItem>
-      <div class="w-full">
-        <ElCheckbox v-model="model.rememberMe" class="mb-18px ml-1px">记住密码</ElCheckbox>
-        <ElButton
-          type="primary"
-          size="large"
-          round
-          block
-          :loading="authStore.loginLoading"
-          @click="handleSubmit"
-        >
-          <span v-if="!authStore.loginLoading">登 录</span>
-          <span v-else>登 录 中...</span>
-        </ElButton>
-        <div v-if="registerEnabled" class="mt-12px text-right">
-          <ElButton text type="primary" @click="toggleLoginModule('register')">立即注册</ElButton>
-        </div>
-      </div>
-    </ElFormItem>
+
+    <div class="mb-20px flex-y-center justify-between px-2px">
+      <ElCheckbox v-model="model.rememberMe">记住密码</ElCheckbox>
+    </div>
+
+    <ElButton
+      type="primary"
+      size="large"
+      class="h-48px w-full rounded-8px"
+      :loading="authStore.loginLoading"
+      @click="handleSubmit"
+    >
+      <span v-if="!authStore.loginLoading">登 录</span>
+      <span v-else>登 录 中...</span>
+    </ElButton>
+
+    <div v-if="registerEnabled" class="mt-16px text-center">
+      <ElButton text type="primary" @click="toggleLoginModule('register')">还没账号？立即注册</ElButton>
+    </div>
   </ElForm>
 </template>
 

@@ -91,21 +91,21 @@ onMounted(() => {
 <template>
   <ElForm ref="formRef" :model="model" :rules="rules" size="large" :show-label="false" @keyup.enter="handleRegister">
     <ElFormItem prop="username">
-      <ElInput v-model="model.username" placeholder="账号">
+      <ElInput v-model="model.username" placeholder="账号" class="h-48px">
         <template #prefix>
           <SvgIcon icon="ph:user" class="text-18px" />
         </template>
       </ElInput>
     </ElFormItem>
     <ElFormItem prop="password">
-      <ElInput v-model="model.password" type="password" show-password-on="click" placeholder="密码">
+      <ElInput v-model="model.password" type="password" show-password-on="click" placeholder="密码" class="h-48px">
         <template #prefix>
           <SvgIcon icon="ph:lock-key" class="text-18px" />
         </template>
       </ElInput>
     </ElFormItem>
     <ElFormItem prop="confirmPassword">
-      <ElInput v-model="model.confirmPassword" type="password" show-password-on="click" placeholder="确认密码">
+      <ElInput v-model="model.confirmPassword" type="password" show-password-on="click" placeholder="确认密码" class="h-48px">
         <template #prefix>
           <SvgIcon icon="ph:lock-key" class="text-18px" />
         </template>
@@ -113,31 +113,29 @@ onMounted(() => {
     </ElFormItem>
     <ElFormItem v-if="captchaEnabled" prop="code">
       <div class="w-full flex-y-center gap-12px">
-        <ElInput v-model="model.code" placeholder="验证码" @keyup.enter="handleRegister">
+        <ElInput v-model="model.code" placeholder="验证码" class="h-48px flex-1" @keyup.enter="handleRegister">
           <template #prefix>
             <SvgIcon icon="ph:shield-check" class="text-18px" />
           </template>
         </ElInput>
         <img
           :src="codeUrl"
-          class="h-40px w-110px cursor-pointer rounded-4px"
+          class="h-48px w-120px cursor-pointer rounded-6px"
           alt="验证码"
           title="点击刷新验证码"
           @click="getCode"
         />
       </div>
     </ElFormItem>
-    <ElFormItem>
-      <div class="w-full">
-        <ElButton type="primary" size="large" round block :loading="loading" @click="handleRegister">
-          <span v-if="!loading">注 册</span>
-          <span v-else>注 册 中...</span>
-        </ElButton>
-        <div class="mt-12px text-right">
-          <ElButton text type="primary" @click="toggleLoginModule('pwd-login')">使用已有账户登录</ElButton>
-        </div>
-      </div>
-    </ElFormItem>
+
+    <ElButton type="primary" size="large" class="h-48px w-full rounded-8px" :loading="loading" @click="handleRegister">
+      <span v-if="!loading">注 册</span>
+      <span v-else>注 册 中...</span>
+    </ElButton>
+
+    <div class="mt-16px text-center">
+      <ElButton text type="primary" @click="toggleLoginModule('pwd-login')">使用已有账户登录</ElButton>
+    </div>
   </ElForm>
 </template>
 
