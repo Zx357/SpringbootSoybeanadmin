@@ -1,0 +1,26 @@
+# 前端
+soybean-admin-element-plus-main/node_modules/
+soybean-admin-element-plus-main/dist/
+soybean-admin-element-plus-main/.eslintcache
+
+# 后端
+RuoYi-Vue-master/*/target/
+RuoYi-Vue-master/**/*.class
+RuoYi-Vue-master/ruoyi-admin/logs/
+
+# 原版参考前端（迁移来源，不纳入仓库）
+RuoYi-Vue3-master/
+
+# IDE / 系统
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
+.DS_Store
+
+# 日志与临时文件
+*.log
+memurai-log.txt
+npm-debug.log*
+pnpm-debug.log*
