@@ -1,17 +1,16 @@
 {
-  "name": "@sa/elp",
+  "name": "ruoyi-soybeanadmin",
   "type": "module",
-  "version": "1.4.0",
-  "description": "A fresh and elegant admin template, based on Vue3、Vite7、rolldown-vite、TypeScript、ElementPlus and UnoCSS. 一个基于Vue3、Vite7、rolldown-vite、TypeScript、ElementPlus and UnoCSS的清新优雅的中后台模版。",
+  "version": "1.0.0",
+  "description": "RuoYi-SoybeanAdmin：若依（RuoYi-Vue）前端整体迁移并美化至 SoybeanAdmin（Element Plus）模板，后端零改动、功能全保留。",
   "author": {
-    "name": "Soybean",
-    "email": "soybeanjs@outlook.com",
-    "url": "https://github.com/soybeanjs"
+    "name": "zxenglish",
+    "url": "https://gitee.com/zxenglish"
   },
   "license": "MIT",
-  "homepage": "https://github.com/soybeanjs/soybean-admin",
+  "homepage": "https://gitee.com/zxenglish/springboot-soybeanadmin",
   "repository": {
-    "url": "https://github.com/soybeanjs/soybean-admin.git"
+    "url": "https://gitee.com/zxenglish/springboot-soybeanadmin.git"
   },
   "bugs": {
     "url": "https://github.com/soybeanjs/soybean-admin/issues"

@@ -1,12 +1,12 @@
 # 前端
-soybean-admin-element-plus-main/node_modules/
-soybean-admin-element-plus-main/dist/
-soybean-admin-element-plus-main/.eslintcache
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
 
 # 后端
-RuoYi-Vue-master/*/target/
-RuoYi-Vue-master/**/*.class
-RuoYi-Vue-master/ruoyi-admin/logs/
+backend/*/target/
+backend/**/*.class
+backend/ruoyi-admin/logs/
 
 # 原版参考前端（迁移来源，不纳入仓库）
 RuoYi-Vue3-master/
