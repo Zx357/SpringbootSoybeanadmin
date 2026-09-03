@@ -140,7 +140,7 @@ onMounted(() => {
     <ElButton
       type="primary"
       size="large"
-      class="h-48px w-full rounded-8px"
+      class="login-btn h-48px w-full rounded-8px"
       :loading="authStore.loginLoading"
       @click="handleSubmit"
     >
@@ -154,4 +154,41 @@ onMounted(() => {
   </ElForm>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+/* 输入框聚焦：柔和阴影 + 过渡 */
+:deep(.el-input__wrapper) {
+  border-radius: 8px;
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+
+  &.is-focus {
+    box-shadow: 0 0 0 1px var(--el-color-primary) inset, 0 4px 16px var(--el-color-primary-light-8);
+  }
+
+  &:hover {
+    background-color: var(--el-fill-color-light);
+  }
+}
+
+/* 登录按钮：渐变 + 悬浮 */
+.login-btn {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background-image: linear-gradient(120deg, var(--el-color-primary) 0%, var(--el-color-primary-light-3) 100%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(120deg, var(--el-color-primary) 0%, var(--el-color-primary-light-3) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px var(--el-color-primary-light-7);
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px var(--el-color-primary-light-7);
+  }
+}
+</style>
