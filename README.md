@@ -146,11 +146,6 @@ cd frontend
 pnpm build    # 产物在 dist/，Nginx 部署并反代后端接口
 ```
 
-## 致谢
-
-- [RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue) — 后端与业务功能
-- [SoybeanAdmin](https://github.com/soybeanjs/soybean-admin) — 前端模板与架构
-
 ## License
 
 MIT
