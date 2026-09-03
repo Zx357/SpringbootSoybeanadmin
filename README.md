@@ -7,6 +7,10 @@
   <img src="https://img.shields.io/badge/Element%20Plus-2.x-409EFF" alt="ElementPlus">
   <img src="https://img.shields.io/badge/license-MIT-orange" alt="MIT">
 </p>
+<p>
+  <a href="https://gitee.com/zxenglish/springboot-soybeanadmin"><img src="https://img.shields.io/badge/Gitee-springboot--soybeanadmin-C71D23?logo=gitee&logoColor=white" alt="Gitee"></a>
+  <a href="https://github.com/Zx357/SpringbootSoybeanadmin"><img src="https://img.shields.io/badge/GitHub-SpringbootSoybeanadmin-181717?logo=github&logoColor=white" alt="GitHub"></a>
+</p>
 
 ## 平台简介
 
