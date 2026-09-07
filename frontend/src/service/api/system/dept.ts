@@ -25,11 +25,6 @@ export function updateDept(data: any) {
   return ruoyiRequest({ url: '/system/dept', method: 'put', data });
 }
 
-// 保存部门排序
-export function updateDeptSort(data: any) {
-  return ruoyiRequest({ url: '/system/dept/updateSort', method: 'put', data });
-}
-
 // 删除部门
 export function delDept(deptId: any) {
   return ruoyiRequest({ url: `/system/dept/${deptId}`, method: 'delete' });

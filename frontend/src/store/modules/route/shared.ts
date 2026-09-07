@@ -138,7 +138,7 @@ function getGlobalMenuByBaseRoute(route: RouteLocationNormalizedLoaded | Elegant
     i18nKey,
     routeKey: name as RouteKey,
     routePath: path as RouteMap[RouteKey],
-    icon: SvgIconVNode({ icon, localIcon, fontSize: iconFontSize || 16 })
+    icon: SvgIconVNode({ icon, localIcon, fontSize: iconFontSize || 14 })
   };
 
   return menu;

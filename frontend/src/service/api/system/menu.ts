@@ -30,11 +30,6 @@ export function updateMenu(data: any) {
   return ruoyiRequest({ url: '/system/menu', method: 'put', data });
 }
 
-// 保存菜单排序
-export function updateMenuSort(data: any) {
-  return ruoyiRequest({ url: '/system/menu/updateSort', method: 'put', data });
-}
-
 // 删除菜单
 export function delMenu(menuId: any) {
   return ruoyiRequest({ url: `/system/menu/${menuId}`, method: 'delete' });

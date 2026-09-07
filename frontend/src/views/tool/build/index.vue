@@ -340,7 +340,9 @@ $lighterBlue: #409EFF;
         position: absolute;
         left: 12px;
         top: 6px;
-        line-height: 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
         color: #00afff;
         font-weight: 600;
         font-size: 17px;
@@ -349,7 +351,6 @@ $lighterBlue: #409EFF;
         >img {
           width: 30px;
           height: 30px;
-          vertical-align: top;
         }
 
         .github {
