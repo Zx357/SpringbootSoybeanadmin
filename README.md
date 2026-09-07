@@ -95,12 +95,13 @@ mysql -uroot -p ry-vue < backend/sql/quartz.sql
 
 ### 2. 启动后端
 
-修改 `backend/ruoyi-admin/src/main/resources/application-druid.yml` 中的数据库密码（Redis 默认 localhost:6379）：
+修改 `backend/ruoyi-admin/src/main/resources/application.yml` 中的数据库密码（Redis 默认 localhost:6379）：
 
 ```bash
 cd backend
 mvn package -DskipTests
 java -jar ruoyi-admin/target/ruoyi-admin.jar     # http://localhost:8080
+# 服务器部署使用生产配置：java -jar ruoyi-admin/target/ruoyi-admin.jar --spring.profiles.active=prod
 ```
 
 ### 3. 启动前端
