@@ -24,3 +24,6 @@ Thumbs.db
 memurai-log.txt
 npm-debug.log*
 pnpm-debug.log*
+
+# Redis 运行时数据
+dump.rdb
